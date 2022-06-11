@@ -1,0 +1,10 @@
+function MiPrimerCorreo() {
+
+var hoja = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
+var ecorreu = hoja.getRange ('A2').getValue();
+var asunto = hoja.getRange ('B2').getValue();
+var mensaje = hoja.getRange ('C2').getValue();
+
+GmailApp.sendEmail(ecorreu,asunto,mensaje)
+
+}
